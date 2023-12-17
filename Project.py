@@ -112,7 +112,7 @@ def checkForKeyPress():
 
 def showStartScreen():
     #titleFont = pygame.font.Font('freesansbold.ttf', 100)
-    #title = titleFont.render('Игра змейка!', True, WHITE)
+    #title = titleFont.render('РРіСЂР° Р·РјРµР№РєР°!', True, WHITE)
     #titleReact = title.get_rect()
     #DISCPLAYSURF.blit(title, titleReact)
     #gameSurf = gameOverFont.render('Game', True, WHITE)
@@ -135,9 +135,9 @@ def showStartScreen():
     startFont = pygame.font.Font('freesansbold.ttf', 50)
     rulesFont = pygame.font.Font('freesansbold.ttf', 30)
     buttonFont = pygame.font.Font('freesansbold.ttf', 20)
-    startSurf = startFont.render('Игра змейка', True, WHITE)
-    rulesSurf = rulesFont.render('Чтобы играть используйте стрелки на клавиатуре', True, WHITE)
-    buttonSurf = buttonFont.render('(чтобы начать нажмите любую кнопку)', True, WHITE)
+    startSurf = startFont.render('РРіСЂР° Р·РјРµР№РєР°', True, WHITE)
+    rulesSurf = rulesFont.render('Р§С‚РѕР±С‹ РёРіСЂР°С‚СЊ РёСЃРїРѕР»СЊР·СѓР№С‚Рµ СЃС‚СЂРµР»РєРё РЅР° РєР»Р°РІРёР°С‚СѓСЂРµ', True, WHITE)
+    buttonSurf = buttonFont.render('(С‡С‚РѕР±С‹ РЅР°С‡Р°С‚СЊ РЅР°Р¶РјРёС‚Рµ Р»СЋР±СѓСЋ РєРЅРѕРїРєСѓ)', True, WHITE)
     startRect = startSurf.get_rect()
     rulesRect = rulesSurf.get_rect()
     buttonRect = buttonSurf.get_rect() 
@@ -170,8 +170,8 @@ def getRandomLocation():
 
 def showGameOverScreen():
     gameOverFont = pygame.font.Font('freesansbold.ttf', 150)
-    gameSurf = gameOverFont.render('Игра', True, WHITE)
-    overSurf = gameOverFont.render('Закончена', True, WHITE)
+    gameSurf = gameOverFont.render('РРіСЂР°', True, WHITE)
+    overSurf = gameOverFont.render('Р—Р°РєРѕРЅС‡РµРЅР°', True, WHITE)
     gameRect = gameSurf.get_rect()
     overRect = overSurf.get_rect()
     gameRect.midtop = (WINDOWWIDTH / 2, 10)
@@ -190,7 +190,7 @@ def showGameOverScreen():
             return
 
 def drawScore(score):
-    scoreSurf = BASICFONT.render('Счет: %s' % (score), True, WHITE)
+    scoreSurf = BASICFONT.render('РЎС‡РµС‚: %s' % (score), True, WHITE)
     scoreRect = scoreSurf.get_rect()
     scoreRect.topleft = (WINDOWWIDTH - 120, 10)
     DISPLAYSURF.blit(scoreSurf, scoreRect)
