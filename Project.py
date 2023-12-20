@@ -111,33 +111,13 @@ def checkForKeyPress():
 
 
 def showStartScreen():
-    #titleFont = pygame.font.Font('freesansbold.ttf', 100)
-    #title = titleFont.render('Игра змейка!', True, WHITE)
-    #titleReact = title.get_rect()
-    #DISCPLAYSURF.blit(title, titleReact)
-    #gameSurf = gameOverFont.render('Game', True, WHITE)
-    #overSurf = gameOverFont.render('Over', True, WHITE)
-    #gameRect = gameSurf.get_rect()
-    #overRect = overSurf.get_rect()
-    #gameRect.midtop = (WINDOWWIDTH / 2, 10)
-    #overRect.midtop = (WINDOWWIDTH / 2, gameRect.height + 10 + 25)
 
-    #DISPLAYSURF.blit(gameSurf, gameRect)
-    #DISPLAYSURF.blit(overSurf, overRect)    
-    #while True:
-        #DISCPLAYSURF.blit(title, titleReact)
-        #drawPressKeyMsg()
-        #if checkForKeyPress():
-            #pygame.event.get() # clear event queue
-            #return
-        #pygame.display.update()
-        #FPSCLOCK.tick(FPS)
     startFont = pygame.font.Font('freesansbold.ttf', 50)
     rulesFont = pygame.font.Font('freesansbold.ttf', 30)
     buttonFont = pygame.font.Font('freesansbold.ttf', 20)
-    startSurf = startFont.render('Игра змейка', True, WHITE)
-    rulesSurf = rulesFont.render('Чтобы играть используйте стрелки на клавиатуре', True, WHITE)
-    buttonSurf = buttonFont.render('(чтобы начать нажмите любую кнопку)', True, WHITE)
+    startSurf = startFont.render('Snake game', True, WHITE)
+    rulesSurf = rulesFont.render('To play use the arrow keys on your keyboard', True, WHITE)
+    buttonSurf = buttonFont.render('(to start press any button)', True, WHITE)
     startRect = startSurf.get_rect()
     rulesRect = rulesSurf.get_rect()
     buttonRect = buttonSurf.get_rect() 
@@ -170,8 +150,8 @@ def getRandomLocation():
 
 def showGameOverScreen():
     gameOverFont = pygame.font.Font('freesansbold.ttf', 150)
-    gameSurf = gameOverFont.render('Игра', True, WHITE)
-    overSurf = gameOverFont.render('Закончена', True, WHITE)
+    gameSurf = gameOverFont.render('Game', True, WHITE)
+    overSurf = gameOverFont.render('Over', True, WHITE)
     gameRect = gameSurf.get_rect()
     overRect = overSurf.get_rect()
     gameRect.midtop = (WINDOWWIDTH / 2, 10)
