@@ -91,11 +91,6 @@ def runGame():
         pygame.display.update()
         FPSCLOCK.tick(FPS)
 
-def drawPressKeyMsg():
-    pressKeySurf = BASICFONT.render('Press a key to play.', True, DARKGRAY)
-    pressKeyRect = pressKeySurf.get_rect()
-    pressKeyRect.topleft = (WINDOWWIDTH - 200, WINDOWHEIGHT - 30)
-    DISPLAYSURF.blit(pressKeySurf, pressKeyRect)
 
 
 def checkForKeyPress():
@@ -128,7 +123,6 @@ def showStartScreen():
     DISPLAYSURF.blit(startSurf, startRect)
     DISPLAYSURF.blit(rulesSurf, rulesRect)
     DISPLAYSURF.blit(buttonSurf, buttonRect)
-    drawPressKeyMsg()
     pygame.display.update()
     pygame.time.wait(500)
     checkForKeyPress() # clear out any key presses in the event queue
@@ -159,7 +153,6 @@ def showGameOverScreen():
 
     DISPLAYSURF.blit(gameSurf, gameRect)
     DISPLAYSURF.blit(overSurf, overRect)
-    drawPressKeyMsg()
     pygame.display.update()
     pygame.time.wait(500)
     checkForKeyPress() # clear out any key presses in the event queue
